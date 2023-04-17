@@ -7,13 +7,13 @@
 /* Always add your CSS below the reset CSS           */
 /*****************************************************/
 :root {
-  --indigo: #355070;
+  --indigo: #364573;
   --misty-violet: #6d226b;
   --soft-magenta: #b56576;
   --bright-rose: #e56b6f;
   --sandy: #faeae1;
   --color-svg: white;
-  --color-svg-hover: #355070;
+  --color-svg-hover: #364573;
   --color-svg-close: white;
 }
 
@@ -282,6 +282,7 @@ header nav a[href]:hover {
 
 .button {
   color: var(--soft-magenta);
+  background-color: white;
   text-decoration: none;
   font-family: Lato;
   border: 3px solid var(--soft-magenta);
@@ -297,84 +298,6 @@ header nav a[href]:hover {
   background-color: var(--soft-magenta);
   text-decoration: none;
   font-weight: normal;
-}
-
-/* Contact */
-.contact h1 {
-  text-align: center;
-  background-color: rgb(229 107 111 / 70%);
-  padding: 1rem;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  margin-top: 1rem;
-}
-
-.contact h2 {
-  color: white;
-  background-color: #6d226b;
-  padding: 1rem;
-  border-radius: 3px;
-  text-shadow: 1px 1px 1px black;
-}
-
-.contact body {
-  background-color: var(--indigo);
-  color: white;
-}
-
-.contact main {
-  max-width: 50rem;
-}
-
-.contact form {
-  display: grid;
-}
-
-.contact fieldset {
-  display: contents;
-
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.contact legend {
-  grid-column: 1 / -1;
-}
-
-.contact .fieldset-wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column-gap: 1rem;
-}
-
-.contact form > label {
-  display: block;
-  margin-top: 1.5rem;
-}
-
-.contact form > label:first-of-type {
-  margin-top: 0;
-}
-
-.contact button {
-  margin-top: 1.5rem;
-}
-
-.contact main {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact svg {
-  width: 100%;
-  height: auto;
-}
-
-.contact .image-wrapper {
-  max-width: 300px;
-  min-width: 100px;
-  align-self: center;
 }
 
 /* Hero */
@@ -465,6 +388,296 @@ header nav a[href]:hover {
   order: -1;
 }
 
+/* Contact */
+.contact h1 {
+  text-align: center;
+  background-color: rgb(229 107 111 / 70%);
+  padding: 1rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 1rem;
+}
+
+.contact main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  padding: 0 2rem;
+  color: white;
+  font-size: 1.2rem;
+  /* background-color: rgba(255 255 255 / 15%); */
+}
+
+.contact svg {
+  width: 100%;
+  height: auto;
+}
+
+.contact .image-wrapper {
+  max-width: 300px;
+  min-width: 100px;
+  align-self: center;
+}
+
+.contact form {
+  display: grid;
+}
+
+.contact form > label {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.contact button,
+.contact .fieldset-wrapper {
+  display: block;
+  margin-top: 2.5rem;
+}
+
+.contact .fieldset-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
+  align-items: center;
+}
+
+.contact fieldset {
+  display: contents;
+
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact legend {
+  grid-column: 1 / -1;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.contact button {
+  justify-self: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.contact textarea,
+.contact fieldset {
+  border-radius: 3px;
+}
+
+/* Contact Background */
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #202346;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background span {
+  width: 27vmin;
+  height: 27vmin;
+  border-radius: 27vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 22;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #e56b6f;
+  top: 92%;
+  left: 28%;
+  animation-duration: 63s;
+  animation-delay: -95s;
+  transform-origin: -22vw 15vh;
+  box-shadow: -54vmin 0 7.559116726632721vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #e56b6f;
+  top: 51%;
+  left: 23%;
+  animation-duration: 203s;
+  animation-delay: -261s;
+  transform-origin: 23vw -8vh;
+  box-shadow: 54vmin 0 6.797424873941582vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #e56b6f;
+  top: 20%;
+  left: 24%;
+  animation-duration: 268s;
+  animation-delay: -217s;
+  transform-origin: -1vw 21vh;
+  box-shadow: -54vmin 0 6.908803668030395vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #b56576;
+  top: 17%;
+  left: 16%;
+  animation-duration: 22s;
+  animation-delay: -256s;
+  transform-origin: 4vw -23vh;
+  box-shadow: 54vmin 0 7.401600025672381vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #e56b6f;
+  top: 38%;
+  left: 83%;
+  animation-duration: 219s;
+  animation-delay: -271s;
+  transform-origin: -24vw -20vh;
+  box-shadow: 54vmin 0 6.897019648576167vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #6d226b;
+  top: 23%;
+  left: 83%;
+  animation-duration: 251s;
+  animation-delay: -198s;
+  transform-origin: -5vw -24vh;
+  box-shadow: -54vmin 0 7.672575776512145vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #e56b6f;
+  top: 75%;
+  left: 38%;
+  animation-duration: 196s;
+  animation-delay: -43s;
+  transform-origin: -13vw 1vh;
+  box-shadow: 54vmin 0 6.867822724555374vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #6d226b;
+  top: 29%;
+  left: 66%;
+  animation-duration: 262s;
+  animation-delay: -111s;
+  transform-origin: -18vw 15vh;
+  box-shadow: -54vmin 0 7.725414409546671vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #b56576;
+  top: 29%;
+  left: 48%;
+  animation-duration: 224s;
+  animation-delay: -34s;
+  transform-origin: -7vw -3vh;
+  box-shadow: 54vmin 0 7.4240631593493305vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #6d226b;
+  top: 79%;
+  left: 3%;
+  animation-duration: 86s;
+  animation-delay: -131s;
+  transform-origin: 2vw 22vh;
+  box-shadow: 54vmin 0 7.67459208128426vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #6d226b;
+  top: 33%;
+  left: 14%;
+  animation-duration: 138s;
+  animation-delay: -62s;
+  transform-origin: -16vw 11vh;
+  box-shadow: 54vmin 0 7.707997729862246vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #6d226b;
+  top: 34%;
+  left: 54%;
+  animation-duration: 205s;
+  animation-delay: -34s;
+  transform-origin: 25vw -12vh;
+  box-shadow: -54vmin 0 7.464162473269497vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #b56576;
+  top: 2%;
+  left: 9%;
+  animation-duration: 62s;
+  animation-delay: -199s;
+  transform-origin: 9vw 11vh;
+  box-shadow: -54vmin 0 6.802575121158709vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #6d226b;
+  top: 19%;
+  left: 97%;
+  animation-duration: 192s;
+  animation-delay: -243s;
+  transform-origin: 11vw -7vh;
+  box-shadow: 54vmin 0 6.828937169555989vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #e56b6f;
+  top: 20%;
+  left: 69%;
+  animation-duration: 156s;
+  animation-delay: -234s;
+  transform-origin: 16vw 18vh;
+  box-shadow: 54vmin 0 7.519397357032636vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #b56576;
+  top: 100%;
+  left: 44%;
+  animation-duration: 199s;
+  animation-delay: -91s;
+  transform-origin: -22vw 18vh;
+  box-shadow: 54vmin 0 6.911444301480877vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #e56b6f;
+  top: 6%;
+  left: 39%;
+  animation-duration: 60s;
+  animation-delay: -184s;
+  transform-origin: 0vw 10vh;
+  box-shadow: -54vmin 0 6.813832255283973vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #b56576;
+  top: 6%;
+  left: 19%;
+  animation-duration: 195s;
+  animation-delay: -262s;
+  transform-origin: 6vw -12vh;
+  box-shadow: 54vmin 0 6.865115426457809vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #e56b6f;
+  top: 48%;
+  left: 31%;
+  animation-duration: 233s;
+  animation-delay: -177s;
+  transform-origin: 15vw -2vh;
+  box-shadow: 54vmin 0 7.5593386236400155vmin currentColor;
+}
+.background span:nth-child(19) {
+  color: #b56576;
+  top: 5%;
+  left: 58%;
+  animation-duration: 149s;
+  animation-delay: -6s;
+  transform-origin: -3vw 18vh;
+  box-shadow: 54vmin 0 7.103716485068217vmin currentColor;
+}
+
 /* Media Queries */
 @media (min-width: 500px) {
   .panel {
@@ -527,6 +740,7 @@ header nav a[href]:hover {
     max-width: 60rem;
     margin: 0 auto;
     background-color: transparent;
+    /* background-color: rgb(250 234 225/ 10%); */
   }
 
   header nav a {
@@ -587,6 +801,18 @@ header nav a[href]:hover {
   }
 
   .contact main {
+    align-self: stretch;
     flex-direction: row;
+    max-width: 1000px;
+  }
+
+  .contact .image-wrapper {
+    max-width: 300px;
+    align-self: flex-start;
+    flex: 0 1 30%;
+  }
+
+  .contact form {
+    flex: 1 1 60%;
   }
 }
