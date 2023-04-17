@@ -781,6 +781,10 @@ header nav a[href]:hover {
   .contact button {
     justify-self: start;
   }
+
+  .contact .image-wrapper {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -788,6 +792,8 @@ header nav a[href]:hover {
     align-self: stretch;
     flex-direction: row;
     max-width: 1000px;
+    position: relative;
+    left: 60px;
   }
 
   .contact .image-wrapper {
